@@ -2,14 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://will-s-h.github.io/posts/language-perfect/</loc>
-    <lastmod>2019-08-07T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://will-s-h.github.io/</loc>
-    <lastmod>2019-08-07T00:00:00+00:00</lastmod>
+    <lastmod>2022-06-26T20:54:46-07:00</lastmod>
+  </url><url>
+    <loc>https://will-s-h.github.io/posts/useso-puzzle-hunt/</loc>
+    <lastmod>2022-06-26T20:54:46-07:00</lastmod>
   </url><url>
     <loc>https://will-s-h.github.io/posts/</loc>
-    <lastmod>2019-02-24T00:00:00+00:00</lastmod>
+    <lastmod>2022-06-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://will-s-h.github.io/posts/language-perfect/</loc>
+    <lastmod>2019-08-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://will-s-h.github.io/posts/sanity-not-statistical/</loc>
     <lastmod>2018-12-29T00:00:00+00:00</lastmod>

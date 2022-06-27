@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blog on Hugo Winston</title>
+    <title>Projects on Hugo Winston</title>
     <link>https://will-s-h.github.io/posts/</link>
-    <description>Recent content in Blog on Hugo Winston</description>
+    <description>Recent content in Projects on Hugo Winston</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 24 Feb 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://will-s-h.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 26 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://will-s-h.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>USESO Puzzle Hunt</title>
+      <link>https://will-s-h.github.io/posts/useso-puzzle-hunt/</link>
+      <pubDate>Sun, 26 Jun 2022 20:54:46 -0700</pubDate>
+      
+      <guid>https://will-s-h.github.io/posts/useso-puzzle-hunt/</guid>
+      <description>What up folks. Idk what I&amp;rsquo;m writing here.</description>
+    </item>
+    
     <item>
       <title>The revolution will be complete when the language is perfect</title>
       <link>https://will-s-h.github.io/posts/language-perfect/</link>
