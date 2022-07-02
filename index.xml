@@ -8,12 +8,26 @@
     <language>en-us</language>
     <lastBuildDate>Sun, 26 Jun 2022 20:54:46 -0700</lastBuildDate><atom:link href="https://will-s-h.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Third Clue</title>
+      <link>https://will-s-h.github.io/thewronganswerisblue/</link>
+      <pubDate>Sat, 02 Jul 2022 11:49:22 -0700</pubDate>
+      
+      <guid>https://will-s-h.github.io/thewronganswerisblue/</guid>
+      <description>Clue  N/A
+ Answer Format N/A</description>
+    </item>
+    
+    <item>
       <title>Second Clue</title>
       <link>https://will-s-h.github.io/2022grading/</link>
       <pubDate>Sat, 02 Jul 2022 11:04:14 -0700</pubDate>
       
       <guid>https://will-s-h.github.io/2022grading/</guid>
-      <description></description>
+      <description>Clue  Roses are red,
+Violets are blue,
+Scott thinks turquoise
+is of this hue.
+ Answer Format Provide your answer in the following format: &amp;ldquo;thewrongansweris&amp;rdquo; + (the answer to the clue).</description>
     </item>
     
     <item>
@@ -23,9 +37,9 @@
       
       <guid>https://will-s-h.github.io/start/</guid>
       <description>Clue  We&amp;rsquo;ve come to the end of camp
-and the memories are fading
+and the memories are already fading
 Let&amp;rsquo;s thank all the counselors
-who spent these few nights _______
+who spent these last few nights _______
  Answer Format The answer will be of the form &amp;ldquo;2022&amp;rdquo; + (the answer to the above clue).</description>
     </item>
     
@@ -36,7 +50,7 @@ who spent these few nights _______
       
       <guid>https://will-s-h.github.io/posts/useso-scavenger-hunt/</guid>
       <description>How the Hunt Works The hunt works in the following manner. This first page is going to give you a clue, which will lead you to the next url. To guess the next page, go to will-s-h.github.io/(the answer you think it is). If you are correct, the website should show the next clue; if not, you will get a 404 error.
-The answer will consist only of lowercase letters, uppercase letters, and numbers.</description>
+The answer will consist only of lowercase letters and numbers.</description>
     </item>
     
     <item>
