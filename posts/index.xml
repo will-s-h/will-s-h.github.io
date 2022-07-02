@@ -8,12 +8,13 @@
     <language>en-us</language>
     <lastBuildDate>Sun, 26 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://will-s-h.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>USESO Puzzle Hunt</title>
+      <title>USESO Scavenger Hunt</title>
       <link>https://will-s-h.github.io/posts/useso-puzzle-hunt/</link>
       <pubDate>Sun, 26 Jun 2022 20:54:46 -0700</pubDate>
       
       <guid>https://will-s-h.github.io/posts/useso-puzzle-hunt/</guid>
-      <description>What up folks. Idk what I&amp;rsquo;m writing here.</description>
+      <description>How the Hunt Works The hunt works in the following manner. This first page is going to give you a clue, which will lead you to the next url. To guess the next page, go to will-s-h.github.io/(the answer you think it is). If you are correct, the website should show the next clue; if not, you will get a 404 error.
+The answer will consist only of lowercase letters, uppercase letters, and numbers.</description>
     </item>
     
   </channel>
