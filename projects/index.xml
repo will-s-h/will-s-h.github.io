@@ -8,13 +8,13 @@
     <language>en-us</language>
     <lastBuildDate>Sun, 26 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://will-s-h.github.io/projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>USESO Scavenger Hunt</title>
-      <link>https://will-s-h.github.io/projects/useso-scavenger-hunt/</link>
-      <pubDate>Sun, 26 Jun 2022 20:54:46 -0700</pubDate>
+      <title>Astronomy Olympiad Notes</title>
+      <link>https://will-s-h.github.io/projects/astronotes/</link>
+      <pubDate>Tue, 09 Aug 2022 23:33:52 -0700</pubDate>
       
-      <guid>https://will-s-h.github.io/projects/useso-scavenger-hunt/</guid>
-      <description>How the Hunt Works The hunt works in the following manner. This first page is going to give you a clue, which will lead you to the next url. To guess the next page, go to will-s-h.github.io/(the answer you think it is). If you are correct, the website should show the next clue; if not, you will get a 404 error.
-The answer will consist only of lowercase letters and numbers.</description>
+      <guid>https://will-s-h.github.io/projects/astronotes/</guid>
+      <description>Introduction During my time in high school, I participated in the United States Astronomy and Astrophysics Olympiad (USAAAO) for three years, as well as the International Olympiad in Astronomy and Astrophysics for the last two of those years, winning gold medals in both years. In my senior year of high school, I also helped contribute problems to the USAAAO.
+Study Notes During my studying, I created four study notes documents:</description>
     </item>
     
   </channel>
