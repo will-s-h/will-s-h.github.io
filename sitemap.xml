@@ -2,10 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://will-s-h.github.io/projects/astronotes/</loc>
-    <lastmod>2022-08-09T23:33:52-07:00</lastmod>
+    <loc>https://will-s-h.github.io/projects/iphonotes/</loc>
+    <lastmod>2022-08-10T11:28:08-07:00</lastmod>
   </url><url>
     <loc>https://will-s-h.github.io/</loc>
+    <lastmod>2022-08-10T11:28:08-07:00</lastmod>
+  </url><url>
+    <loc>https://will-s-h.github.io/projects/astronotes/</loc>
     <lastmod>2022-08-09T23:33:52-07:00</lastmod>
   </url><url>
     <loc>https://will-s-h.github.io/about/</loc>
