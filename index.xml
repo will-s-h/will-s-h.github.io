@@ -6,7 +6,34 @@
     <description>Recent content in The Website of William Huang on William Huang</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 10 Aug 2022 11:28:08 -0700</lastBuildDate><atom:link href="https://will-s-h.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 12 Aug 2022 14:29:44 -0700</lastBuildDate><atom:link href="https://will-s-h.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Code Demo</title>
+      <link>https://will-s-h.github.io/random/codedemo/</link>
+      <pubDate>Fri, 12 Aug 2022 14:29:44 -0700</pubDate>
+      
+      <guid>https://will-s-h.github.io/random/codedemo/</guid>
+      <description>int x = foo(); /* This is a comment Continuation of comment */ int y = bar();  Test text.</description>
+    </item>
+    
+    <item>
+      <title>Advanced Placement Notes</title>
+      <link>https://will-s-h.github.io/random/ap_notes/</link>
+      <pubDate>Fri, 12 Aug 2022 11:44:30 -0700</pubDate>
+      
+      <guid>https://will-s-h.github.io/random/ap_notes/</guid>
+      <description> AP Computer Science - notes AP Statistics - notes  </description>
+    </item>
+    
+    <item>
+      <title>College Notes</title>
+      <link>https://will-s-h.github.io/projects/notes/</link>
+      <pubDate>Fri, 12 Aug 2022 11:35:31 -0700</pubDate>
+      
+      <guid>https://will-s-h.github.io/projects/notes/</guid>
+      <description>Stanford (2022-) Concurrent Enrollment (2021-2022)  Multivariable Calculus - notes Linear Algebra - notes  </description>
+    </item>
+    
     <item>
       <title>Physics Olympiad Notes</title>
       <link>https://will-s-h.github.io/projects/iphonotes/</link>
@@ -33,7 +60,7 @@ Study Notes During my studying, I created four study notes documents:</descripti
       <pubDate>Tue, 09 Aug 2022 00:00:00 +0000</pubDate>
       
       <guid>https://will-s-h.github.io/about/</guid>
-      <description>I&amp;rsquo;m William Huang, an undergraduate at Stanford studying Computer Science and Physics. For a summary of my professional education and experience, my resume is located here.
+      <description>I&amp;rsquo;m William Huang, an undergraduate at Stanford studying Computer Science and Physics. For a summary of my professional education and experience, my resume is located here. If you&amp;rsquo;d like to contact me, please email willsh@stanford.edu.
 I&amp;rsquo;m passionate about all things computer science and physics. To be more specific, on the computer science side, I&amp;rsquo;m interested in the multitude of applications of artificial intelligence and machine learning to develop better solutions to problems on the personal, communal, industrial, and global scales.</description>
     </item>
     

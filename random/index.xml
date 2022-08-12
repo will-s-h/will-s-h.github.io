@@ -8,6 +8,24 @@
     <language>en-us</language>
     <lastBuildDate>Sun, 26 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://will-s-h.github.io/random/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Code Demo</title>
+      <link>https://will-s-h.github.io/random/codedemo/</link>
+      <pubDate>Fri, 12 Aug 2022 14:29:44 -0700</pubDate>
+      
+      <guid>https://will-s-h.github.io/random/codedemo/</guid>
+      <description>int x = foo(); /* This is a comment Continuation of comment */ int y = bar();  Test text.</description>
+    </item>
+    
+    <item>
+      <title>Advanced Placement Notes</title>
+      <link>https://will-s-h.github.io/random/ap_notes/</link>
+      <pubDate>Fri, 12 Aug 2022 11:44:30 -0700</pubDate>
+      
+      <guid>https://will-s-h.github.io/random/ap_notes/</guid>
+      <description> AP Computer Science - notes AP Statistics - notes  </description>
+    </item>
+    
+    <item>
       <title>USESO Scavenger Hunt</title>
       <link>https://will-s-h.github.io/random/useso-scavenger-hunt/</link>
       <pubDate>Sun, 26 Jun 2022 20:54:46 -0700</pubDate>
