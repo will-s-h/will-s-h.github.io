@@ -29,12 +29,9 @@
     
   
   
-  
     
-        <link rel="stylesheet" href="/css/github_code.css">
-        <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+        <link href="/css/prism.css" rel="stylesheet" />
     
-  
 
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"> 
@@ -43,7 +40,7 @@
 
 
 
-<body class='page page-default-single'>
+<body class='page page-default-single  line-numbers '>
   <div id="menu-main-mobile" class="menu-main-mobile">
     <ul class="menu">
         
@@ -100,12 +97,59 @@
 </div>
 
 <div class="content">
-  <pre class="prettyprint">
-int x = foo();  /* This is a comment 
-  Continuation of comment */
-int y = bar();
-</pre>
-<p>Test text.</p>
+  <h1 id="code-demo">Code Demo</h1>
+<p>The following is a code demo, in C++, rendered by Prism.</p>
+<pre><code class="language-cpp"><!--
+#include <bits/stdc++.h>
+using namespace std;
+using ll = long long;
+
+const int maxN = 2e5;
+int n, k;
+int a[maxN] = {};
+
+bool works(ll mid){
+    int groups = 0;
+    ll sum = 0;
+    for(int i = 0; i < n; i++){
+        if(a[i] > mid) return false;
+        if(sum + a[i] > mid){
+            sum = 0;
+            groups++;
+        }
+        sum += a[i];
+    }
+    return (groups < k);
+}
+
+int main(){
+    freopen("input.in", "r", stdin);
+    freopen("output.out", "w", stdout);
+    cin.tie(0)->sync_with_stdio(0);
+
+    cin >> n >> k;
+    for(int i = 0; i < n; i++){
+        cin >> a[i];
+    }
+
+    ll lo = 0; ll hi = 2e14+1;
+
+    while(lo < hi){
+        ll mid = lo + (hi - lo)/2;
+        if(works(mid)){
+            hi = mid;
+        } else {
+            lo = mid+1;
+        }
+    }
+
+    cout << hi;
+
+    return 0;
+}
+--></code></pre>
+<p>One can also have inline code segments, like <code class="language-cpp">int i = 0;</code> Even better one can even load code from files, even specific ranges of lines!</p>
+<pre data-src= "/files/code/test.cpp" data-range="9,21"></pre>
 
 </div>
 
@@ -145,6 +189,10 @@ int y = bar();
   
 
   
+  
+  
+  
+      <script src="/js/prism.js"></script>
   
 
   

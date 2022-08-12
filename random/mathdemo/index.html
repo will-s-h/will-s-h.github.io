@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Tags - William Huang</title>
+  <title>Math Demo - William Huang</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="https://will-s-h.github.io/favicon.png">
 
@@ -14,18 +14,30 @@
   
 
   
-    
-    <meta property="og:title" content="Tags"/>
+    <meta name="description" content="MathJax display test."/>
+    <meta property="og:title" content="Math Demo"/>
     <meta property="og:type" content="website"/>
-    <meta property="og:url" content="https://will-s-h.github.io/tags/"/>
+    <meta property="og:url" content="https://will-s-h.github.io/random/mathdemo/"/>
     
-    
+    <meta property="og:description" content="MathJax display test."/>
     <meta name="twitter:card" content="summary"/>
     <meta name="twitter:site" content="@"/>
     <meta name="twitter:creator" content="@"/>
   
   
   
+    
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    };
+    </script>
+    <script id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
     
   
   
@@ -38,7 +50,7 @@
 
 
 
-<body class='page page-default-list '>
+<body class='page page-default-single '>
   <div id="menu-main-mobile" class="menu-main-mobile">
     <ul class="menu">
         
@@ -89,12 +101,17 @@
   </div>
 </div>
     
-  <div class="intro">
-    <h1>Tags<span class="dot">.</span></h1>
-    
-  </div>
+<div class="intro">
+  <h1>Math Demo<span class="dot">.</span></h1>
   
-  
+</div>
+
+<div class="content">
+  <p>If $a=1$, $b=2$, and $c=3$, then</p>
+<p>$$\frac{a^2+b^2}{c^2} = \frac 5 9$$</p>
+<p>How&rsquo;s that for some math?</p>
+
+</div>
 
     <div class="footer">
   
