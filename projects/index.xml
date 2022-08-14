@@ -8,32 +8,42 @@
     <language>en-us</language>
     <lastBuildDate>Sun, 26 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://will-s-h.github.io/projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>College Notes</title>
+      <title>Notes Compilation</title>
       <link>https://will-s-h.github.io/projects/notes/</link>
       <pubDate>Fri, 12 Aug 2022 11:35:31 -0700</pubDate>
       
       <guid>https://will-s-h.github.io/projects/notes/</guid>
-      <description>Stanford (2022-) Concurrent Enrollment (2021-2022)  Multivariable Calculus - notes Linear Algebra - notes  </description>
+      <description>A compilation of all of the study notes on this website. Some of these notes are part of larger projects; these may have a dedicated page with a description of the notes and links to several notes files in one page.
+ College Coursework Stanford (2022-) Concurrent Enrollment (2021-2022)  Multivariable Calculus - notes Linear Algebra - notes   Olympiad Notes   Physics Olympiad Notes   Astro Olympiad Notes    CS Notes   Traveller&amp;rsquo;s Guide to C++    AP Notes   Select AP Course Notes   </description>
     </item>
     
     <item>
       <title>Physics Olympiad Notes</title>
-      <link>https://will-s-h.github.io/projects/iphonotes/</link>
+      <link>https://will-s-h.github.io/projects/notes/iphonotes/</link>
       <pubDate>Wed, 10 Aug 2022 11:28:08 -0700</pubDate>
       
-      <guid>https://will-s-h.github.io/projects/iphonotes/</guid>
+      <guid>https://will-s-h.github.io/projects/notes/iphonotes/</guid>
       <description>A little bit about me: I participated in the F=ma competition all four years of high school, and ended up making the US Physics Camp in junior and senior year of high school. In junior year, I was also part of the International Physics Olympiad team, where I won a gold medal as a part of the first and only all-gold US IPhO Team.
 Notes My notes on physics olympiads are located here.</description>
     </item>
     
     <item>
       <title>Astronomy Olympiad Notes</title>
-      <link>https://will-s-h.github.io/projects/astronotes/</link>
+      <link>https://will-s-h.github.io/projects/notes/astronotes/</link>
       <pubDate>Tue, 09 Aug 2022 23:33:52 -0700</pubDate>
       
-      <guid>https://will-s-h.github.io/projects/astronotes/</guid>
+      <guid>https://will-s-h.github.io/projects/notes/astronotes/</guid>
       <description>Introduction During my time in high school, I participated in the United States Astronomy and Astrophysics Olympiad (USAAAO) for three years, as well as the International Olympiad in Astronomy and Astrophysics for the last two of those years, winning gold medals in both years. In my senior year of high school, I also helped contribute problems to the USAAAO.
 Study Notes During my studying, I created four study notes documents:</description>
+    </item>
+    
+    <item>
+      <title>Advanced Placement Notes</title>
+      <link>https://will-s-h.github.io/projects/notes/ap_notes/</link>
+      <pubDate>Mon, 08 Aug 2022 11:44:30 -0700</pubDate>
+      
+      <guid>https://will-s-h.github.io/projects/notes/ap_notes/</guid>
+      <description> AP Computer Science - notes AP Statistics - notes  </description>
     </item>
     
   </channel>

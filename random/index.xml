@@ -8,36 +8,6 @@
     <language>en-us</language>
     <lastBuildDate>Sun, 26 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://will-s-h.github.io/random/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Code Demo</title>
-      <link>https://will-s-h.github.io/random/codedemo/</link>
-      <pubDate>Fri, 12 Aug 2022 14:29:44 -0700</pubDate>
-      
-      <guid>https://will-s-h.github.io/random/codedemo/</guid>
-      <description>Code Demo The following is a code demo, in C++, rendered by Prism.
-using namespace std; using ll = long long; const int maxN = 2e5; int n, k; int a[maxN] = {}; bool works(ll mid){ int groups = 0; ll sum = 0; for(int i = 0; i mid) return false; if(sum + a[i]  mid){ sum = 0; groups++; } sum += a[i]; } return (groups sync_with_stdio(0); cin  n  k; for(int i = 0; i  a[i]; } ll lo = 0; ll hi = 2e14+1; while(lo  One can also have inline code segments, like int i = 0; Even better one can even load code from files, even specific ranges of lines!</description>
-    </item>
-    
-    <item>
-      <title>Math Demo</title>
-      <link>https://will-s-h.github.io/random/mathdemo/</link>
-      <pubDate>Fri, 12 Aug 2022 13:55:46 -0700</pubDate>
-      
-      <guid>https://will-s-h.github.io/random/mathdemo/</guid>
-      <description>If $a=1$, $b=2$, and $c=3$, then
-$$\frac{a^2+b^2}{c^2} = \frac 5 9$$
-How&amp;rsquo;s that for some math?</description>
-    </item>
-    
-    <item>
-      <title>Advanced Placement Notes</title>
-      <link>https://will-s-h.github.io/random/ap_notes/</link>
-      <pubDate>Fri, 12 Aug 2022 11:44:30 -0700</pubDate>
-      
-      <guid>https://will-s-h.github.io/random/ap_notes/</guid>
-      <description> AP Computer Science - notes AP Statistics - notes  </description>
-    </item>
-    
-    <item>
       <title>USESO Scavenger Hunt</title>
       <link>https://will-s-h.github.io/random/useso-scavenger-hunt/</link>
       <pubDate>Sun, 26 Jun 2022 20:54:46 -0700</pubDate>
