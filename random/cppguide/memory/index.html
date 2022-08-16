@@ -393,8 +393,30 @@ int *ptr = new int(25);
 string *ptr2 = new string();
 int *ptr3 = new int[10];
 --></code></pre>
-<p>Notice that the brackets <code>[]</code> allow for the allocation of a block of memory enough for ten integers in the third line. Now, for the deallocation of this memory, one must</p>
-<p>For a very comprehensive FAQ about C++ memory management, see <a href="https://isocpp.org/wiki/faq/freestore-mgmt">here</a>.</p>
+<p>Notice that the brackets <code>[]</code> allow for the allocation of a block of memory enough for ten integers in the third line. Now, for the deallocation of this memory, one must use the delete the pointers manually with the <code>delete</code> operator, like so:</p>
+<pre><code><!--
+delete ptr;
+delete ptr2;
+delete[] ptr3;
+--></code></pre>
+<p>Note that the brackets were used once again to indicate the deletion of several blocks of memory, but without the need to indicate the length.</p>
+<p>Now is a good time to mention to be careful with dynamic memory allocation. It&rsquo;s important to delete pointers once you&rsquo;re done with using them, because they otherwise constitute a <em>memory leak</em> in which memory is tied up without being used. Further, it&rsquo;s important not to use <code>delete</code> on the same memory address twice; otherwise, disastrous consequences could occur. For more information, see the very comprehensive FAQ about C++ memory management  <a href="https://isocpp.org/wiki/faq/freestore-mgmt">here</a>.</p>
+<h2 id="smart-pointers">Smart Pointers</h2>
+<p>If dynamic memory allocation seems complicated and unsafe, that&rsquo;s because it is. But no fear: smart pointers can save the day. If you use a smart pointer, the memory is automatically freed up after the smart pointer goes out of scope. For example:</p>
+<pre><code><!--
+void useSmartPointer(){
+    unique_ptr<string> ptr(new string("this is a test."));
+    //use ptr, like in
+    cout << *ptr << endl;
+    //...
+} //ptr is automatically deleted here
+--></code></pre>
+<p>There are three main types of smart pointers:</p>
+<ul>
+<li><code>unique_ptr</code>: allows exactly one owner of the underlying pointer. Use this as your default choice.</li>
+<li><code>shared_ptr</code>: reference-counted smart pointer. Use this when you return a copy of the pointer, but want to keep the original.</li>
+<li><code>weak_ptr</code>: this is a little more complicated, and won&rsquo;t be used often; see <a href="https://docs.microsoft.com/en-us/cpp/cpp/how-to-create-and-use-weak-ptr-instances?view=msvc-170">here</a> for details.</li>
+</ul>
 </section>
 
 </div>
