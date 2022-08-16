@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Math Demo - William Huang</title>
+  <title>Memory Allocation - William Huang</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="https://will-s-h.github.io/favicon.png">
 
@@ -14,12 +14,12 @@
   
 
   
-    <meta name="description" content="MathJax display test."/>
-    <meta property="og:title" content="Math Demo"/>
+    <meta name="description" content="A description of memory allocation in C&#43;&#43;."/>
+    <meta property="og:title" content="Memory Allocation"/>
     <meta property="og:type" content="website"/>
-    <meta property="og:url" content="https://will-s-h.github.io/random/mathdemo/"/>
+    <meta property="og:url" content="https://will-s-h.github.io/random/cppguide/memory/"/>
     
-    <meta property="og:description" content="MathJax display test."/>
+    <meta property="og:description" content="A description of memory allocation in C&#43;&#43;."/>
     <meta name="twitter:card" content="summary"/>
     <meta name="twitter:site" content="@"/>
     <meta name="twitter:creator" content="@"/>
@@ -27,20 +27,10 @@
   
   
     
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script>
-    MathJax = {
-      tex: {
-        inlineMath: [['$', '$'], ['\\(', '\\)']]
-      }
-    };
-    </script>
-    <script id="MathJax-script" async
-      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
-    </script>
+  
+  
     
-  
-  
+        <link href="/css/prism.css" rel="stylesheet" /> 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -50,7 +40,7 @@
 
 
 
-<body class='page page-default-single '>
+<body class='page page-default-single  line-numbers '>
   <div id="menu-main-mobile" class="menu-main-mobile">
     <ul class="menu">
         
@@ -264,6 +254,16 @@
     var switcher2 = document.getElementsByClassName('js-toggle-2')[0];
 
     
+        var dark = document.createElement('link');
+        dark.rel = 'stylesheet';
+        dark.type = 'text/css';
+        dark.href = '/css/prism_dark.css';
+
+        var light = document.createElement('link');
+        light.rel = 'stylesheet';
+        light.type = 'text/css';
+        light.href = '/css/prism.css';
+    
 
     
     switcher.addEventListener("click", function() {
@@ -279,6 +279,9 @@
 
             
             
+                body.removeChild(light);
+                body.appendChild(dark);
+            
         } else {
             body.classList.remove('dark-mode');
             setTimeout(function() {
@@ -286,6 +289,9 @@
             }, 100);
 
             
+            
+                body.removeChild(dark);
+                body.appendChild(light);
             
         }
     })
@@ -303,6 +309,9 @@
 
             
             
+                body.removeChild(light);
+                body.appendChild(dark);
+            
         } else {
             body.classList.remove('dark-mode');
             setTimeout(function() {
@@ -310,6 +319,9 @@
             }, 100);
 
             
+            
+                body.removeChild(dark);
+                body.appendChild(light);
             
         }
     })
@@ -323,9 +335,13 @@
 
         
         
+            body.appendChild(dark);
+        
     } else {
 
         
+        
+            body.appendChild(light);
         
     }
 
@@ -340,14 +356,46 @@
 
     
 <div class="intro">
-  <h1>Math Demo<span class="dot">.</span></h1>
+  <h1>Memory Allocation<span class="dot">.</span></h1>
   
 </div>
 
 <div class="content">
-  <p>If $a=1$, $b=2$, and $c=3$, then</p>
-<p>$$\frac{a^2+b^2}{c^2} = \frac 5 9$$</p>
-<p>How&rsquo;s that for some math?</p>
+  <p>The following provides an explanation of C++ memory allocation, including static variables and dynamic memory allocation.</p>
+<section class="language-cpp">
+<h1 id="c-memory-overview">C++ Memory Overview</h1>
+<p>In C++, memory is allocated in four different segments:</p>
+<ol>
+<li><em>text/code segment</em>, where executable instructions are stored.</li>
+<li><em>data segment</em>, which is divided into two components:
+<ol>
+<li><em>initialized data segment</em>, where global and static variables that are initialized are stored.</li>
+<li><em>uninitialized data segment</em>, also called the BSS segment, where data is initialized by the kernel to 0 before the program&rsquo;s execution.</li>
+</ol>
+</li>
+<li><em>stack</em>, which contains local (temporary) variables and information about function calls (e.g. address of where to return to, information about caller&rsquo;s environment).</li>
+<li><em>heap</em>, where dynamic memory allocation takes place (see below).</li>
+</ol>
+<p>In many cases, you won&rsquo;t need to worry about C++ memory because it is being automatically allocated and deallocated. Let&rsquo;s first talk about the default allocation C++ uses.</p>
+<h2 id="default-memory-allocation">Default Memory Allocation</h2>
+<p>The automatic memory allocation occurs on the stack. A stack is a First-In, Last-Out (FILO) structure: memory is released (deallocated) in the reverse order that it is allocated. As soon as execution of the current code block (delimited using <code><!--{}--></code>) is completed, memory for all variables in that block are automatically collected in the reverse order that they were allocated. This is when destructors are invoked to clean up resources.</p>
+<p>In general, whenever possible, one should allow the default memory allocation to take its course, because the default allocation is</p>
+<ul>
+<li>faster to type</li>
+<li>faster in runtime</li>
+<li>less prone to memory leaks</li>
+<li>less prone to errors (like using <code>delete</code> multiple times on the same memory address)</li>
+</ul>
+<h2 id="dynamic-memory-allocation">Dynamic Memory Allocation</h2>
+<p>However, there are uses for manually allocating and deallocating memory—this is called <em>dynamic memory allocation</em>. The easiest way to allocate memory is with the <code>new</code> operator:</p>
+<pre><code><!--
+int *ptr = new int(25);
+string *ptr2 = new string();
+int *ptr3 = new int[10];
+--></code></pre>
+<p>Notice that the brackets <code>[]</code> allow for the allocation of a block of memory enough for ten integers in the third line. Now, for the deallocation of this memory, one must</p>
+<p>For a very comprehensive FAQ about C++ memory management, see <a href="https://isocpp.org/wiki/faq/freestore-mgmt">here</a>.</p>
+</section>
 
 </div>
 
@@ -393,6 +441,8 @@
   
   
   
+  
+      <script src="/js/prism.js"></script>
   
 
   

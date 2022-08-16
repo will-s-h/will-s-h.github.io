@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Code Demo - William Huang</title>
+  <title>Classes and Structs - William Huang</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="https://will-s-h.github.io/favicon.png">
 
@@ -14,12 +14,12 @@
   
 
   
-    <meta name="description" content="Code display test."/>
-    <meta property="og:title" content="Code Demo"/>
+    <meta name="description" content="An explanation of C&#43;&#43; classes and structs."/>
+    <meta property="og:title" content="Classes and Structs"/>
     <meta property="og:type" content="website"/>
-    <meta property="og:url" content="https://will-s-h.github.io/random/codedemo/"/>
+    <meta property="og:url" content="https://will-s-h.github.io/random/cppguide/classes/"/>
     
-    <meta property="og:description" content="Code display test."/>
+    <meta property="og:description" content="An explanation of C&#43;&#43; classes and structs."/>
     <meta name="twitter:card" content="summary"/>
     <meta name="twitter:site" content="@"/>
     <meta name="twitter:creator" content="@"/>
@@ -356,64 +356,148 @@
 
     
 <div class="intro">
-  <h1>Code Demo<span class="dot">.</span></h1>
+  <h1>Classes and Structs<span class="dot">.</span></h1>
   
 </div>
 
 <div class="content">
-  <h1 id="code-demo">Code Demo</h1>
-<p>The following is a code demo, in C++, rendered by Prism.</p>
-<pre><code class="language-cpp"><!--
-#include <bits/stdc++.h>
-using namespace std;
-using ll = long long;
-
-const int maxN = 2e5;
-int n, k;
-int a[maxN] = {};
-
-bool works(ll mid){
-    int groups = 0;
-    ll sum = 0;
-    for(int i = 0; i < n; i++){
-        if(a[i] > mid) return false;
-        if(sum + a[i] > mid){
-            sum = 0;
-            groups++;
+  <section class="language-cpp">
+<p>The following provides an explanation of C++ classes and structs.</p>
+<h1 id="table-of-contents">Table of Contents</h1>
+<ol>
+<li>
+<h2 id="class-syntaxclasssyntax"><a href="#ClassSyntax">Class Syntax</a></h2>
+<ol>
+<li>
+<h3 id="methodsmethods"><a href="#methods">Methods</a></h3>
+</li>
+<li>
+<h3 id="constructorsconstructors"><a href="#constructors">Constructors</a></h3>
+</li>
+<li>
+<h3 id="destructorsdestructors"><a href="#destructors">Destructors</a></h3>
+</li>
+<li>
+<h3 id="structsstructs"><a href="#structs">Structs</a></h3>
+</li>
+<li>
+<h3 id="moremore"><a href="#more">More</a></h3>
+</li>
+</ol>
+</li>
+</ol>
+<h1 id="class-syntax-a-nameclasssyntaxa">Class Syntax <a name="ClassSyntax"></a></h1>
+<p>A class is a template for a custom kind of object one can create in order to accomplish a certain task. Classes have <em>attributes</em> and <em>methods</em>, which can both either be <em>private</em> or <em>public</em>. As a basic example:</p>
+<pre><code><!--
+class Car {
+    //attributes (by default, private):
+    int id; 
+    string owner;
+    
+    //methods (by default, private):
+    void private_method();
+    
+    public: //access specifier
+        //public attributes:
+        int weight;
+        string color;
+        
+        //public methods:
+        void public_method();
+};
+--></code></pre>
+<p>Note the following:</p>
+<ol>
+<li>the semicolon at the end</li>
+<li>the public versus private attributes and methods</li>
+</ol>
+<h2 id="methods-a-namemethodsa">Methods <a name="methods"></a></h2>
+<p>Methods are functions that belong to classes. Methods can be defined both within the class and outside of the class. As an example:</p>
+<pre><code><!--
+class example{
+    public:
+        void method1(){
+            cout << "Method 1.";
         }
-        sum += a[i];
-    }
-    return (groups < k);
-}
+        
+        void method2();
+};
 
-int main(){
-    freopen("input.in", "r", stdin);
-    freopen("output.out", "w", stdout);
-    cin.tie(0)->sync_with_stdio(0);
-
-    cin >> n >> k;
-    for(int i = 0; i < n; i++){
-        cin >> a[i];
-    }
-
-    ll lo = 0; ll hi = 2e14+1;
-
-    while(lo < hi){
-        ll mid = lo + (hi - lo)/2;
-        if(works(mid)){
-            hi = mid;
-        } else {
-            lo = mid+1;
-        }
-    }
-
-    cout << hi;
-
-    return 0;
+void example::method2(){
+    cout << "Method 2.";
 }
 --></code></pre>
-<p>One can also have inline code segments, like <code class="language-cpp">int i = 0;</code> Even better one can even load code from files, even specific ranges of lines!</p>
-<pre data-src= "/files/code/test.cpp" data-range="9,21"></pre>
+<p>Note the syntax. To define a method outside of a class, it must at least be declared within the class, as the <code>void method2();</code> in line 7 accomplishes. However, once a method is declared, you can define it outside of the class; even private methods can be declared outside. For example:</p>
+<pre><code><!--
+class example{
+    void private_method();
+    
+    public:
+        void public_method(){
+            private_method();
+        }
+};
+
+void example::private_method(){
+    cout << "This method is private.";
+}
+--></code></pre>
+<p>Running <code>public_method()</code> here would print <code><!--"This method is private."--></code></p>
+<h2 id="constructors-a-nameconstructorsa">Constructors <a name="constructors"></a></h2>
+<p>Constructors are special methods for building a new object of a certain class. One can overload constructors just like regular methods for different parameters. Note the syntax in the below example:</p>
+<pre><code><!--
+class Car {        
+    public:          
+        string brand;  
+        string model;
+        int year;    
+        
+        Car(){ // Constructor for no parameters
+            brand = "unknown";
+            model = "unknown";
+            year = INT_MIN;
+        }
+        
+        Car(string x, string y, int z) { // Constructor with parameters
+            brand = x;
+            model = y;
+            year = z;
+        }
+};
+
+int main() {
+    // Create Car objects and call the constructor with different values
+    Car carObj1("BMW", "X5", 1999);
+    Car carObj2("Ford", "Mustang", 1969);
+    Car carObj3 = Car();
+}
+--></code></pre>
+<p>Pay close attention to the syntax for the initialization of <code>carObj3</code>. To use the default constructor, one cannot initialize it using <code>Car carObj3()</code> because that would be interpreted as a function with no parameters and output type <code>Car</code>. Therefore, one must either do what is above, or simply declare the object <code>Car carObj3;</code> to utilize the default constructor. See <a href="https://stackoverflow.com/questions/49802012/different-ways-of-initializing-an-object-in-c">this link</a> for more information on the nuances of object initializing.</p>
+<h2 id="destructors-a-namedestructorsa">Destructors <a name="destructors"></a></h2>
+<p>Destructors are special methods that are automatically called when an object goes out of scope, releasing memory occupied by the objects in reverse order of object creation. There is only one per class; this method cannot be overloaded. The syntax is as follows:</p>
+<pre><code><!--
+class example {
+    public:
+        int id;
+        example(int input) { //Constructor
+            id = input;
+        }
+        
+        ~example(){ //Destructor
+            cout << "example " << id << " has been destroyed :(" << endl;
+        }
+}
+--></code></pre>
+<h2 id="structs-a-namestructsa">Structs <a name="structs"></a></h2>
+<p>A <code>struct</code> in C++ is exactly the same as a class in C++, except no access specifies like <code>private</code> or <code>public</code> are necessary; in a <code>struct</code>, everything is assumed to be public. This simplifies the syntax, especially for creating a quick class like the example below:</p>
+<pre><code><!--
+struct edge {
+    int a, b, w;
+};
+--></code></pre>
+<h2 id="more-a-namemorea">More <a name="more"></a></h2>
+<p>There&rsquo;s definitely a lot more to classes, like <a href="https://www.w3schools.com/cpp/cpp_inheritance.asp">inheritance</a> and <a href="https://www.w3schools.com/cpp/cpp_polymorphism.asp">polymorphism</a>, but that&rsquo;s for another time.</p>
+</section>
 
 </div>
 

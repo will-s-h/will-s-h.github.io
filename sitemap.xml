@@ -2,10 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://will-s-h.github.io/sh/</loc>
-    <lastmod>2022-08-13T00:00:00+00:00</lastmod>
+    <loc>https://will-s-h.github.io/random/cppguide/memory/</loc>
+    <lastmod>2022-08-15T00:22:00-07:00</lastmod>
   </url><url>
     <loc>https://will-s-h.github.io/</loc>
+    <lastmod>2022-08-15T00:22:00-07:00</lastmod>
+  </url><url>
+    <loc>https://will-s-h.github.io/random/cppguide/</loc>
+    <lastmod>2022-08-13T23:40:36-07:00</lastmod>
+  </url><url>
+    <loc>https://will-s-h.github.io/sh/</loc>
     <lastmod>2022-08-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://will-s-h.github.io/projects/notes/</loc>
@@ -69,6 +75,10 @@
     <lastmod>2022-06-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://will-s-h.github.io/categories/</loc>
+  </url><url>
+    <loc>https://will-s-h.github.io/random/cppguide/classes/</loc>
+  </url><url>
+    <loc>https://will-s-h.github.io/random/cppguide/pointers/</loc>
   </url><url>
     <loc>https://will-s-h.github.io/tags/</loc>
   </url>

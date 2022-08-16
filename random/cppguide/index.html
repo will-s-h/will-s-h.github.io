@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Advanced Placement Notes - William Huang</title>
+  <title>A Traveller&#39;s Guide to C&#43;&#43; - William Huang</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="https://will-s-h.github.io/favicon.png">
 
@@ -14,12 +14,12 @@
   
 
   
-    <meta name="description" content="Notes from selected AP Courses."/>
-    <meta property="og:title" content="Advanced Placement Notes"/>
+    <meta name="description" content="A C&#43;&#43; guide from the perspective of an amateur programmer of several programming languages. Focuses on the unique syntax and structure of C&#43;&#43; compared to other languages."/>
+    <meta property="og:title" content="A Traveller&#39;s Guide to C&#43;&#43;"/>
     <meta property="og:type" content="website"/>
-    <meta property="og:url" content="https://will-s-h.github.io/random/ap_notes/"/>
+    <meta property="og:url" content="https://will-s-h.github.io/random/cppguide/"/>
     
-    <meta property="og:description" content="Notes from selected AP Courses."/>
+    <meta property="og:description" content="A C&#43;&#43; guide from the perspective of an amateur programmer of several programming languages. Focuses on the unique syntax and structure of C&#43;&#43; compared to other languages."/>
     <meta name="twitter:card" content="summary"/>
     <meta name="twitter:site" content="@"/>
     <meta name="twitter:creator" content="@"/>
@@ -30,6 +30,8 @@
   
   
     
+        <link href="/css/prism.css" rel="stylesheet" /> 
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"> 
@@ -38,7 +40,7 @@
 
 
 
-<body class='page page-default-single '>
+<body class='page page-default-single  line-numbers '>
   <div id="menu-main-mobile" class="menu-main-mobile">
     <ul class="menu">
         
@@ -252,6 +254,16 @@
     var switcher2 = document.getElementsByClassName('js-toggle-2')[0];
 
     
+        var dark = document.createElement('link');
+        dark.rel = 'stylesheet';
+        dark.type = 'text/css';
+        dark.href = '/css/prism_dark.css';
+
+        var light = document.createElement('link');
+        light.rel = 'stylesheet';
+        light.type = 'text/css';
+        light.href = '/css/prism.css';
+    
 
     
     switcher.addEventListener("click", function() {
@@ -267,6 +279,9 @@
 
             
             
+                body.removeChild(light);
+                body.appendChild(dark);
+            
         } else {
             body.classList.remove('dark-mode');
             setTimeout(function() {
@@ -274,6 +289,9 @@
             }, 100);
 
             
+            
+                body.removeChild(dark);
+                body.appendChild(light);
             
         }
     })
@@ -291,6 +309,9 @@
 
             
             
+                body.removeChild(light);
+                body.appendChild(dark);
+            
         } else {
             body.classList.remove('dark-mode');
             setTimeout(function() {
@@ -298,6 +319,9 @@
             }, 100);
 
             
+            
+                body.removeChild(dark);
+                body.appendChild(light);
             
         }
     })
@@ -311,9 +335,13 @@
 
         
         
+            body.appendChild(dark);
+        
     } else {
 
         
+        
+            body.appendChild(light);
         
     }
 
@@ -328,15 +356,36 @@
 
     
 <div class="intro">
-  <h1>Advanced Placement Notes<span class="dot">.</span></h1>
+  <h1>A Traveller&#39;s Guide to C&#43;&#43;<span class="dot">.</span></h1>
   
 </div>
 
 <div class="content">
-  <ol>
-<li>AP Computer Science - <a href="/files/courses/AP_CS.pdf">notes</a></li>
-<li>AP Statistics - <a href="/files/courses/AP_Stats.pdf">notes</a></li>
+  <p>This is a C++ guide from the perspective of an amateur programmer of several programming languages. It focuses on the unique syntax and structure of C++ compared to other languages. It&rsquo;s mainly a place where I document to myself important differences of C++ that I must keep in mind while programming.</p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ol>
+<li>
+<h2 id="memory-allocation-in-crandomcppguidememory"><a href="/random/cppguide/memory">Memory Allocation in C++</a></h2>
+</li>
+<li>
+<h2 id="h-vs-cpp-file-compilation-stuff-to-be-added">.h vs. .cpp, file compilation stuff (to be added)</h2>
+</li>
+<li>
+<h2 id="classes-and-structsrandomcppguideclasses"><a href="/random/cppguide/classes">Classes and Structs</a></h2>
+</li>
+<li>
+<h2 id="pointers-and-referencesrandomcppguidepointers"><a href="/random/cppguide/pointers">Pointers and References</a></h2>
+</li>
 </ol>
+<h3 id="notice-about-c-practices">Notice About C++ Practices</h3>
+<p>All code segments introduced in this guide assumes the following lines are included at the top of every program:</p>
+<section class="language-cpp">
+<pre><code><!--
+#include <bits/stdc++.h>
+using namespace std;
+--></code></pre>
+</section>
+<p>Additionally, we will be using the C++17 standard unless otherwise mentioned.</p>
 
 </div>
 
@@ -382,6 +431,8 @@
   
   
   
+  
+      <script src="/js/prism.js"></script>
   
 
   

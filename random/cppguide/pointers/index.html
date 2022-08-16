@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Astronomy Olympiad Notes - William Huang</title>
+  <title>Pointers and References - William Huang</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="https://will-s-h.github.io/favicon.png">
 
@@ -14,12 +14,12 @@
   
 
   
-    <meta name="description" content="Study notes from my time studying for the USAAAO and IOAA astronomy olympiads and comments on my journey."/>
-    <meta property="og:title" content="Astronomy Olympiad Notes"/>
+    <meta name="description" content="An explanation of C&#43;&#43; pointers and references."/>
+    <meta property="og:title" content="Pointers and References"/>
     <meta property="og:type" content="website"/>
-    <meta property="og:url" content="https://will-s-h.github.io/projects/astronotes/"/>
+    <meta property="og:url" content="https://will-s-h.github.io/random/cppguide/pointers/"/>
     
-    <meta property="og:description" content="Study notes from my time studying for the USAAAO and IOAA astronomy olympiads and comments on my journey."/>
+    <meta property="og:description" content="An explanation of C&#43;&#43; pointers and references."/>
     <meta name="twitter:card" content="summary"/>
     <meta name="twitter:site" content="@"/>
     <meta name="twitter:creator" content="@"/>
@@ -30,6 +30,8 @@
   
   
     
+        <link href="/css/prism.css" rel="stylesheet" /> 
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"> 
@@ -38,7 +40,7 @@
 
 
 
-<body class='page page-blog-single '>
+<body class='page page-default-single  line-numbers '>
   <div id="menu-main-mobile" class="menu-main-mobile">
     <ul class="menu">
         
@@ -252,6 +254,16 @@
     var switcher2 = document.getElementsByClassName('js-toggle-2')[0];
 
     
+        var dark = document.createElement('link');
+        dark.rel = 'stylesheet';
+        dark.type = 'text/css';
+        dark.href = '/css/prism_dark.css';
+
+        var light = document.createElement('link');
+        light.rel = 'stylesheet';
+        light.type = 'text/css';
+        light.href = '/css/prism.css';
+    
 
     
     switcher.addEventListener("click", function() {
@@ -267,6 +279,9 @@
 
             
             
+                body.removeChild(light);
+                body.appendChild(dark);
+            
         } else {
             body.classList.remove('dark-mode');
             setTimeout(function() {
@@ -274,6 +289,9 @@
             }, 100);
 
             
+            
+                body.removeChild(dark);
+                body.appendChild(light);
             
         }
     })
@@ -291,6 +309,9 @@
 
             
             
+                body.removeChild(light);
+                body.appendChild(dark);
+            
         } else {
             body.classList.remove('dark-mode');
             setTimeout(function() {
@@ -298,6 +319,9 @@
             }, 100);
 
             
+            
+                body.removeChild(dark);
+                body.appendChild(light);
             
         }
     })
@@ -311,9 +335,13 @@
 
         
         
+            body.appendChild(dark);
+        
     } else {
 
         
+        
+            body.appendChild(light);
         
     }
 
@@ -327,37 +355,141 @@
 </div>
 
     
-  <div class="blog">
-    
-    <div class="intro">
-      <h1>Astronomy Olympiad Notes<span class="dot">.</span></h1>
-      
-    </div>
-    <div class="content">
-      <h1 id="introduction">Introduction</h1>
-<p>During my time in high school, I participated in the United States Astronomy and Astrophysics Olympiad (USAAAO) for three years, as well as the International Olympiad in Astronomy and Astrophysics for the last two of those years, winning gold medals in both years. In my senior year of high school, I also helped contribute problems to the USAAAO.</p>
-<h1 id="study-notes">Study Notes</h1>
-<p>During my studying, I created four study notes documents:</p>
-<ol>
-<li><a href="/files/astronotes/formula_sheet.pdf">An overall formula sheet</a> (the most helpful)</li>
-<li><a href="/files/astronotes/extra_topics.pdf">A formula sheet with extra topics</a></li>
-<li><a href="/files/astronotes/Cosmology.pdf">A handout on Cosmology</a></li>
-<li><a href="/files/astronotes/SphericalTrig+Time.pdf">A handout on Spherical Trig + Time</a></li>
-</ol>
-<h1 id="comments">Comments</h1>
-<h2 id="comments-on-the-study-notes">Comments on the Study Notes</h2>
-<p>I want to stress that using these notes alone is not a good strategy—they are for review and enrichment. For more general resources, check out the <a href="https://usaaao.org">usaaao.org</a> website.</p>
-<p>Note that to perform well in the USAAAO and IOAA, the overall formula sheet is the most useful. I made special handouts for Cosmology and Spherical Trig + Time because these were the two topics I felt to be the most consistently challenging for me, but this does not reflect how common these topics appear—often times, they may not appear in a contest at all!</p>
-<p>If you see any mistakes in the handouts, please email me immediately at <a href="mailto:willsh@stanford.edu">willsh@stanford.edu</a>.</p>
-<h2 id="comments-on-astro-problem-writing">Comments on Astro Problem Writing</h2>
-<p>In my senior year of high school, I decided to try out something new—instead of competing for a fourth consecutive year, I helped write questions for the USAAAO organization. I ended up contributing L1 (Long Question #1) on the 2022 NAC (see <a href="https://usaaao.files.wordpress.com/2022/03/usaaao_second_exam_2022_problems.pdf">here</a>), which was the problem about the James Webb Space Telescope. As a side note, I&rsquo;m proud that I wrote a problem about the JWST before the 2022 IPhO (and likely the 2022 IOAA), which featured problems about the JWST as well.</p>
-<p>When I wrote my problem, I intended it to be a unique, unprecedented problem, but one that was solvable given standard knowledge of astrophysics and some mathematical prowess in approximations. I wanted the problem&rsquo;s subparts to contain a range of difficulty, with the most unique subpart (part (d)) being worth the most points. I did not expect the problem to be so difficult amongst the competitors; even within the eventual top scorers, most of the competitors obtained 10 points or fewer out of a possible 45. The top scorer on this question only obtained around 30 points. If you took the 2022 NAC, on behalf of the USAAAO problem writing committee, I&rsquo;m sorry about problem L1. You probably should&rsquo;ve started with problem L2 before doing problem L1.</p>
-<p>Ironically, my problem is not covered in any of my study notes linked above. That&rsquo;s because my study notes are not representative of all the material that I studied for astronomy and astrophysics olympiads; they&rsquo;re only a concise summary of the most common topics, plus some extra handouts on several topics I found to be confusing. However, it should have been the warning sign to me that my problem may not have been accessible to most astronomy olympiad competitors.</p>
-<h2 id="comments-on-the-ioaa-experience">Comments on the IOAA Experience</h2>
-<p>(to be added)</p>
+<div class="intro">
+  <h1>Pointers and References<span class="dot">.</span></h1>
+  
+</div>
 
-    </div>
-  </div>
+<div class="content">
+  <section class="language-cpp">
+<p>The following provides an explanation of C++ pointers and references. Unlike most languages, C++ supports both pointers and references; most languages only support references.</p>
+<h1 id="references">References</h1>
+<h2 id="creating-references">Creating References</h2>
+<p>A reference variable is a &ldquo;reference&rdquo; to an existing variable, and it is created with the <code>&amp;</code> operator. For example:</p>
+<pre><code><!--
+string test = "this is a test";
+string &ref = test;
+--></code></pre>
+<p>Note that executing <code><!--cout << test--></code> or <code><!--cout << ref--></code> would both print out <code><!--"this is a test"--></code>. The key thing here is that if we were to edit either of the strings, say</p>
+<pre><code><!--
+ref = "test, take 2";
+--></code></pre>
+<p>then both <code>test</code> and <code>ref</code> would take on this new value. That&rsquo;s because <code>test</code> and <code>ref</code> both <em>reference</em> the same underlying object.</p>
+<h2 id="memory-addresses">Memory Addresses</h2>
+<p>The creation of the reference works by essentially linking both variables to the same memory address. When either <code>test</code> or <code>ref</code> in the above example is accessed or edited, both variables are manipulating the same portion of a computer&rsquo;s memory.</p>
+<p>In fact, C++ makes it very easy to check the memory address of a variable, again using the <code>&amp;</code> operator. The difference in syntax compared to the creation of a reference is as follows: a reference creation uses the <code>&amp;</code> in declaration, while accessing a variable&rsquo;s memory address uses <code>&amp;</code> in the actual usage. For example,</p>
+<pre><code><!--
+cout << &test << endl;
+cout << &ref << endl;
+--></code></pre>
+<p>would print out the same hexadecimal such as <code>0x7ffc0e0cc0f8</code> twice, denoting the actual memory address of <code>test</code> and <code>ref</code>.</p>
+<h2 id="passingreturning-references">Passing/Returning References</h2>
+<p>Typically, C++ is pass-by-value, but one can pass by reference into a function using the <code>&amp;</code> operator. This allows one to change the value of variables passed into functions, like in the following example:</p>
+<pre><code><!--
+void swap(int &a, int &b){ //a and b swap references (and thus values)
+    int temp = a;
+    a = b;
+    b = temp;
+}
+--></code></pre>
+<p>One can also return references, like in the following example:</p>
+<pre><code><!--
+int a[5] = {0, 2, 4, 6, 8};
+
+int& set(int i){
+    return a[i]; //returns the reference to a[i]
+}
+
+int main(){
+    set(2) = 7; //changes a[2] from 4 to 7
+}
+--></code></pre>
+<h1 id="pointers">Pointers</h1>
+<h2 id="basic-pointer-operations">Basic Pointer Operations</h2>
+<p>One can think of pointers as simply a modifiable reference; a pointer is a variable that stores a memory address as its value; for example, <code><!--string *ptr = &test--></code> is a pointer with the memory address of <code>test</code> in it.</p>
+<p>One can access the value of the object at the end of a pointer using an asterisk:</p>
+<pre><code><!--
+cout << *ptr << endl; //outputs "test, take 2"
+--></code></pre>
+<p>And one can also change the value of the object at the end of pointer, or change the pointer itself, as distinguished by the following example:</p>
+<pre><code><!--
+string test = "testing...";
+string test2 = "still testing...";
+string *ptr = &test;
+*ptr = "done testing!"; //changing value of object
+ptr = &test2; //changing value of pointer
+
+cout << test << endl; //outputs "done testing!"
+cout << *ptr << endl; //outputs "still testing..."
+--></code></pre>
+<p>One can even have a pointer of a pointer, like what follows:</p>
+<pre><code><!--
+int a = 15;
+int *ptr = &a;
+int **pptr = &ptr;
+
+cout << **pptr; //outputs 15
+--></code></pre>
+<h2 id="pointer-arithmetic-with-arrays">Pointer Arithmetic with Arrays</h2>
+<p>If we set a pointer to the address of an array, we can increment and decrement the pointer to traverse the array. For example:</p>
+<pre><code><!--
+int arr[6] = {0, 7, 9, 5, 17, 13};
+int *ptr = arr;
+
+while(ptr < arr + 6){
+    cout << *ptr << " "; //overall, this prints out "0 7 9 5 17 13"
+    ptr++;
+}
+--></code></pre>
+<p>Notice how the array <code>arr</code> itself has memory associated with the 0th element, and <code>arr+i</code> corresponds to the memory address of the <code>i</code>th element. Thus, something like the following would be a set of valid operations:</p>
+<pre><code><!--
+int arr[6] = {0, 7, 9, 5, 17, 13};
+int *ptr = arr;
+
+*(ptr + 2) = 500; //sets arr[2] = 500
+ptr[5] *= 7; //multiples arr[5] by 7, making it 91
+(ptr+3)[-2] += 29; //adds 29 to arr[1], making it 36
+--></code></pre>
+<h2 id="passingreturning-pointers">Passing/Returning Pointers</h2>
+<p>One can pass pointers into or return pointers. Passing pointers into functions is one way to allow a function to accept arrays of variable length, as shown here:</p>
+<pre><code><!--
+double average(int *arr, int len){
+    if(arr == nullptr) return 0; //no average for 0 length array
+    int sum = 0;
+    
+    for(int i = 0; i < len; i++){
+        sum += arr[i];
+    }
+    
+    return double(sum) / len;
+}
+--></code></pre>
+<p>Note that the parameter <code>len</code> is crucial for the success of this function; otherwise, there is no indication of the end of the pointer, and you will see random numbers being added into the sum.</p>
+<p>Returning pointers is a little trickier. Take a look at this example:</p>
+<pre><code><!--
+int* createp(){
+    int a[5] = {0, 1, 2, 3, 4};
+    int *q = a;
+    return q;
+}
+--></code></pre>
+<p>When you call this function and try <code><!--int *q = createp(); cout << *q;--></code>, a random number like <code>-1222416320</code> or <code>4198832</code> will appear, instead of the expected <code>0</code>. This is because the memory allocated for <code>a</code> is automatically deallocated upon moving out of the scope of <code>createp()</code>. To avoid this problem, one can use a <code>static</code> variable or use dynamic memory allocation—for a refresher, visit the <a href="/random/cppguide/memory">C++ memory guide</a>.</p>
+<h2 id="pointer-to-members-of-a-class">Pointer to Members of a Class</h2>
+<p>You can also set a pointer to be of a class/struct type. When doing so, one can access attributes and member functions using the <code>-&gt;</code> operator:</p>
+<pre><code><!--
+struct example{
+    int a, b, w;
+};
+
+int main(){
+    example e = {1, 2, 5};
+    example *ptr = &e;
+    cout << ptr->a << " " << ptr->b << " " << ptr->w; //outputs 1 2 5
+}
+--></code></pre>
+</section>
+
+</div>
 
     <div class="footer">
   
@@ -401,6 +533,8 @@
   
   
   
+  
+      <script src="/js/prism.js"></script>
   
 
   

@@ -8,12 +8,54 @@
     <language>en-us</language>
     <lastBuildDate>Sun, 26 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://will-s-h.github.io/random/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Memory Allocation</title>
+      <link>https://will-s-h.github.io/random/cppguide/memory/</link>
+      <pubDate>Mon, 15 Aug 2022 00:22:00 -0700</pubDate>
+      
+      <guid>https://will-s-h.github.io/random/cppguide/memory/</guid>
+      <description>The following provides an explanation of C++ memory allocation, including static variables and dynamic memory allocation.
+C++ Memory Overview In C++, memory is allocated in four different segments:
+ text/code segment, where executable instructions are stored. data segment, which is divided into two components:  initialized data segment, where global and static variables that are initialized are stored. uninitialized data segment, also called the BSS segment, where data is initialized by the kernel to 0 before the program&amp;rsquo;s execution.</description>
+    </item>
+    
+    <item>
+      <title>A Traveller&#39;s Guide to C&#43;&#43;</title>
+      <link>https://will-s-h.github.io/random/cppguide/</link>
+      <pubDate>Sat, 13 Aug 2022 23:40:36 -0700</pubDate>
+      
+      <guid>https://will-s-h.github.io/random/cppguide/</guid>
+      <description>This is a C++ guide from the perspective of an amateur programmer of several programming languages. It focuses on the unique syntax and structure of C++ compared to other languages. It&amp;rsquo;s mainly a place where I document to myself important differences of C++ that I must keep in mind while programming.
+Table of Contents   Memory Allocation in C++   .h vs. .cpp, file compilation stuff (to be added)   Classes and Structs   Pointers and References   Notice About C++ Practices All code segments introduced in this guide assumes the following lines are included at the top of every program:</description>
+    </item>
+    
+    <item>
       <title>USESO Scavenger Hunt</title>
       <link>https://will-s-h.github.io/random/useso-scavenger-hunt/</link>
       <pubDate>Sun, 26 Jun 2022 20:54:46 -0700</pubDate>
       
       <guid>https://will-s-h.github.io/random/useso-scavenger-hunt/</guid>
       <description>How the Hunt Works The hunt works in the following manner. This first page is going to give you a clue, which will lead you to the next url. To guess the next page, go to will-s-h.github.io/sh/(the answer you think it is). Make sure to include the /sh, which stands for scavenger hunt! If you are correct, the website should show the next clue; if not, you will get a 404 error.</description>
+    </item>
+    
+    <item>
+      <title>Classes and Structs</title>
+      <link>https://will-s-h.github.io/random/cppguide/classes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://will-s-h.github.io/random/cppguide/classes/</guid>
+      <description>The following provides an explanation of C++ classes and structs.
+Table of Contents   Class Syntax   Methods   Constructors   Destructors   Structs   More     Class Syntax  A class is a template for a custom kind of object one can create in order to accomplish a certain task. Classes have attributes and methods, which can both either be private or public.</description>
+    </item>
+    
+    <item>
+      <title>Pointers and References</title>
+      <link>https://will-s-h.github.io/random/cppguide/pointers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://will-s-h.github.io/random/cppguide/pointers/</guid>
+      <description>The following provides an explanation of C++ pointers and references. Unlike most languages, C++ supports both pointers and references; most languages only support references.
+References Creating References A reference variable is a &amp;ldquo;reference&amp;rdquo; to an existing variable, and it is created with the &amp;amp; operator. For example:
+ Note that executing  or  would both print out . The key thing here is that if we were to edit either of the strings, say</description>
     </item>
     
   </channel>
