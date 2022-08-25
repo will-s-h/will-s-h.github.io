@@ -29,6 +29,17 @@ Table of Contents   Memory Allocation in C++   .h vs. .cpp, file compilation stu
     </item>
     
     <item>
+      <title>Math Demo</title>
+      <link>https://will-s-h.github.io/random/drafts/mathdemo/</link>
+      <pubDate>Fri, 12 Aug 2022 13:55:46 -0700</pubDate>
+      
+      <guid>https://will-s-h.github.io/random/drafts/mathdemo/</guid>
+      <description>If $a=1$, $b=2$, and $c=3$, then
+$$\frac{a^2+b^2}{c^2} = \frac 5 9$$
+How&amp;rsquo;s that for some math?</description>
+    </item>
+    
+    <item>
       <title>USESO Scavenger Hunt</title>
       <link>https://will-s-h.github.io/random/useso-scavenger-hunt/</link>
       <pubDate>Sun, 26 Jun 2022 20:54:46 -0700</pubDate>
