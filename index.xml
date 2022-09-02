@@ -6,7 +6,16 @@
     <description>Recent content in The Website of William Huang on William Huang</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 15 Aug 2022 00:22:00 -0700</lastBuildDate><atom:link href="https://will-s-h.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 25 Aug 2022 12:00:00 -0700</lastBuildDate><atom:link href="https://will-s-h.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Upcoming</title>
+      <link>https://will-s-h.github.io/projects/upcoming/</link>
+      <pubDate>Thu, 25 Aug 2022 12:00:00 -0700</pubDate>
+      
+      <guid>https://will-s-h.github.io/projects/upcoming/</guid>
+      <description>(to be announced soon)</description>
+    </item>
+    
     <item>
       <title>Memory Allocation</title>
       <link>https://will-s-h.github.io/random/cppguide/memory/</link>
